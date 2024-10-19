@@ -1,17 +1,16 @@
-// Get the client
-import mysql from 'mysql2/promise';
+import express from 'express'
 
-// Load environment variables
-import dotenv from 'dotenv';
-dotenv.config();
+const app = express()
 
-// Create the connection to database
-const connection = await mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-});
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+    console.error(err.stack)
+    res.status(500).send('Something broke!')  
+})
 
-const [rows] = await connection.query('SELECT * FROM PERSONA');
-console.log(rows);
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000')
+})
