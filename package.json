@@ -1,0 +1,21 @@
+{
+  "name": "facturacion-uptc-back",
+  "version": "1.0.0",
+  "description": "Prerequisitos",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.7.7",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "mysql2": "^3.11.3"
+  }
+}
