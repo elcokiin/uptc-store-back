@@ -2,7 +2,10 @@ CREATE TABLE PERSONA (
     documento INTEGER PRIMARY KEY,
     tipo_documento CHAR(3),
     nombres VARCHAR(50) NOT NULL,
-    apellidos VARCHAR(50) NOT NULL
+    apellidos VARCHAR(50) NOT NULL, 
+    email_persona VARCHAR(100) NOT NULL,
+    direccion_persona VARCHAR(50) NOT NULL,
+    telefono_persona VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE USUARIO (
