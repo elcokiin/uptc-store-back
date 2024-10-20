@@ -4,7 +4,7 @@ ADD CONSTRAINT check_nombres CHECK (nombres <> ''),
 ADD CONSTRAINT check_apellidos CHECK (apellidos <> '');
 
 ALTER TABLE USUARIO
-ADD CONSTRAINT check_tipo_usuario CHECK (tipo IN ('A', 'U')),
+ADD CONSTRAINT check_tipo_usuario CHECK (tipo IN ('A', 'C','U')),
 ADD CONSTRAINT fk_documento FOREIGN KEY (documento) REFERENCES PERSONA(documento);
 
 ALTER TABLE PRODUCTO
