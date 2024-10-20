@@ -33,7 +33,7 @@ CREATE TABLE PRODUCTO_LOTE (
 );
 
 CREATE TABLE FACTURA (
-    id_factura INTEGER PRIMARY KEY,
+    id_factura VARCHAR(20) PRIMARY KEY,
     fecha DATE NOT NULL,
     id_cliente INTEGER,
     id_vendedor INTEGER,
@@ -42,7 +42,7 @@ CREATE TABLE FACTURA (
 );
 
 CREATE TABLE DETALLE_FACTURA (
-    id_factura INTEGER,
+    id_factura VARCHAR(20),
     id_producto INTEGER,
     id_lote INTEGER,
     cantidad INTEGER NOT NULL,

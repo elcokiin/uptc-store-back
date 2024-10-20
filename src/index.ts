@@ -1,4 +1,5 @@
 import express from 'express'
+import { getPersona, getPersonas, createPersona } from './db/persona'
 
 const app = express()
 
@@ -7,8 +8,15 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
     res.status(500).send('Something broke!')  
 })
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.get('/personas', async (req, res) => {
+  const personas = await getPersonas()
+  res.send(personas)
+})
+
+app.get('/personas/:id', async (req, res) => {
+  const id: number = parseInt(req.params.id)
+  const personas = await getPersona(id)
+  res.send(personas)
 })
 
 app.listen(3000, () => {

@@ -1,24 +1,28 @@
 {
   "name": "facturacion-uptc-back",
   "version": "1.0.0",
-  "description": "Prerequisitos",
+  "description": "Creación de una API REST para el proyecto de facturación de la UPTC",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "clear": "rm -rf dist",
+    "dev": "nodemon"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.7.7",
-    "typescript": "^5.6.3"
+    "@types/express": "5.0.0",
+    "@types/node": "22.7.7",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "5.6.3"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^5.0.1",
-    "mysql2": "^3.11.3"
+    "dotenv": "16.4.5",
+    "express": "5.0.1",
+    "mysql2": "3.11.3"
   }
 }
