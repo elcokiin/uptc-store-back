@@ -31,6 +31,7 @@ ADD CONSTRAINT fk_vendedor FOREIGN KEY (id_vendedor) REFERENCES PERSONA(document
 ALTER TABLE DETALLE_FACTURA
 ADD CONSTRAINT check_cantidad_detalle_factura CHECK (cantidad > 0),
 ADD CONSTRAINT check_iva CHECK (iva >= 0 AND iva <= 100),
+ADD CONSTRAINT check_descuento CHECK (descuento >= 0 AND descuento <= 100),
 ADD CONSTRAINT check_subtotal CHECK (subtotal >= 0),
 ADD CONSTRAINT fk_factura FOREIGN KEY (id_factura) REFERENCES FACTURA(id_factura),
 ADD CONSTRAINT fk_producto_detalle FOREIGN KEY (id_producto) REFERENCES PRODUCTO(id_producto),

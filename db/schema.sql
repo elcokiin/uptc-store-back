@@ -47,6 +47,7 @@ CREATE TABLE DETALLE_FACTURA (
     id_lote INTEGER,
     cantidad INTEGER NOT NULL,
     iva FLOAT NOT NULL,
+    descuento FLOAT,
     subtotal FLOAT NOT NULL,
     PRIMARY KEY (id_factura, id_producto, id_lote)
 );
